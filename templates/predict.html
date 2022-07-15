@@ -1,0 +1,49 @@
+<!--  create html for prediction -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--  link bootstrap css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!--  link css -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Home</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="{{ url_for('index') }}">pHs prediction</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container">
+            <div class="col-md-12 center">
+               
+                <img class="img" src="{{ 'static/images/image.png' }}" alt="">
+            </div>
+            <h2>{{ prediction_text }}</h2>
+            <br><br>
+            <!--   return to index page span -->
+            <span class="btn btn-primary" onclick="window.location.href='/'">Back</span>
+        </div>
+        <br>
+        
+        <footer class="bg-dark text-center text-lg-start">
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.901); padding: 50px; color: white;">
+                <span class="text-muted" style="color: white;">Copyright &copy; 2022 | </span>
+              <a class="text-dark" style="color: white;"  href="{{ url_for('index') }}">pHs prediction</a>
+            </div>
+        </footer>
+    
+    <!--  link bootstrap js -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!--  link js -->
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>   
+    </body>
+</html>
